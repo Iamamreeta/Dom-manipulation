@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 1</title>
+</head>
+<body>
+
+  <h1 id="heading">Watch me grow!</h1>
+
+  <input type=""number id="sizeInput" placeholder="Enter font size">
+  <button onclick="changeSize()">Change Font Size</button>
+
+  <script>
+    function changeSize() {
+      var size = document.getElementById("sizeInput").value;
+      document.getElementById("heading").style.fontSize = size + "px";
+    }
+  </script>
+
+</body>
+</html>
