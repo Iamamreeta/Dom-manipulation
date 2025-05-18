@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Text Styler</title>
+</head>
+<body>
+
+  <h2>Enter Your Text Style</h2>
+
+  <form onsubmit="showStyledText(); return false;">
+    <label>Text Color: <input type="text" id="textColor" placeholder="e.g. red or #ff0000"></label><br><br>
+    <label>Background Color: <input type="text" id="bgColor" placeholder="e.g. white or #000000"></label><br><br>
+    <label>Text Content: <input type="text" id="textContent" placeholder="e.g. Hello, World!"></label><br><br>
+    <button type="submit">Show Text</button>
+  </form>
+
+  <p id="styledOutput"></p>
+
+  <script>
+    function showStyledText() {
+      var textColor = document.getElementById("textColor").value;
+      var bgColor = document.getElementById("bgColor").value;
+      var content = document.getElementById("textContent").value;
+
+      var output = document.getElementById("styledOutput");
+      output.textContent = content;
+      output.style.color = textColor;
+      output.style.backgroundColor = bgColor;
+      output.style.padding = "10px";
+    }
+  </script>
+
+</body>
+</html>
